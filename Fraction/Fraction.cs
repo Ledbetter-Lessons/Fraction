@@ -1,8 +1,13 @@
-﻿using System;
+﻿// Released under the gpl 3.0 license http://www.gnu.org/licenses/gpl-3.0.html
+// Free to use how you want. Provided as-is, without warranty of any kind. 
+// A link back to my site would be nice, but not manditory
+// https://sites.google.com/view/ledbetter-lessons/fraction
+// Let me now if you find bugs or improvements.
+
+using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-
-	using This = Fraction;                                          //Used to have shorter code. :)
+using This = Fraction;                                          //Used to have shorter code. :)
 
 /// <summary>this class is like a type int, double, etc with built in functions</summary>
 [Serializable, StructLayout(LayoutKind.Sequential)]
