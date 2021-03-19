@@ -33,7 +33,10 @@ namespace Fraction_Test
             rtb.AppendText("\n" + "Raise fraction to a fraction power" + "\n");
             rtb.AppendText(f1.ToString() + " ^ " + f2.ToString() + " = " + (f1 ^ f2).ToString() + "    or decimal: " + (f1 ^ f2).toDecimal() + "\n");
             rtb.AppendText("\n" + "Find the Nth root of a fraction. (Nth root can be a fraction)" + "\n");
-            rtb.AppendText(f1.ToString() + ".Root( " + f2.ToString() + ") = " + f1.Root(f2).ToString() + "    or decimal: " + f1.Root(f2).toDecimal() + "\n");
+            rtb.AppendText(f1.ToString() + ".Root( " + f2.ToString() + ") = " + f1.Root(f2).ToString() + "    or decimal: " + f1.Root(f2).toDecimal() + "\n" + "\n");
+
+            rtb.AppendText("f1 numerator is: " + f1.N + "\n");
+            rtb.AppendText("f1 denominator is: " + f1.D + "\n");
         }
     }
 }
