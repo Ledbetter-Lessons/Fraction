@@ -200,6 +200,7 @@ public class Fraction : IEquatable<Fraction>
 		}
 		return Convert.ToDouble(ret);
 	}
+	/// <summary>This GDC is too slow so will most likely be removed</summary>
 	private static double GCDSlow(double numerator, double denominator)
 	{
 		double n = Math.Abs(numerator);     // assigned n and d to the answer numerator/denominator, as well as an
