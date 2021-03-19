@@ -7,3 +7,5 @@ Overloads added so far are +, - , *, /, ^ and a root function.
 Most fractions are auto simplified. Ex: 2/6 = 1/3
 
 Included is a test project so you can see how it works.
+
+check out my webpage for more info and more projects. https://sites.google.com/view/ledbetter-lessons/fraction
