@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using This = Fraction;                                          //Used to have shorter code. :)
 
-/// <summary>this class is like a type int, double, etc with built in functions</summary>
+/// <summary>this class is like a primitive data type with built in functions</summary>
 [Serializable, StructLayout(LayoutKind.Sequential)]
 public class Fraction : IEquatable<Fraction>
 {
@@ -47,7 +47,8 @@ public class Fraction : IEquatable<Fraction>
 	#endregion
 
 	#region convert from
-	/// <summary>private because you can use (Fraction = double) operator</summary>
+	/// <summary>converts double to fraction. Ex:1.3 = 13/100.
+	/// private because you can use the (Fraction = double) operator</summary>
 	private static This fromDecimal(double dec)
 	{
 		double neg = 1;
@@ -70,7 +71,7 @@ public class Fraction : IEquatable<Fraction>
 		n += d * whole;
 		return _Simplify(n * neg, d);                           // probably could remove simplify... 
 	}
-	/// <summary>resturns a Fraction object from a string representation of a fraction. Ex: "1/3"</summary>
+	/// <summary>converts a string representation of a fraction to a Fraction. Ex: "1/3" = 1/3</summary>
 	private static This fromString(string fraction)
 	{
 		double n = 0;
@@ -101,6 +102,7 @@ public class Fraction : IEquatable<Fraction>
 	#endregion
 
 	#region convert to
+	/// <summary>divides the numerator by the denominator and returns the result.</summary>
 	public double toDecimal()
 	{
 		return this.N / this.D;
@@ -108,9 +110,9 @@ public class Fraction : IEquatable<Fraction>
 	#endregion
 
 	#region √ root
-	/// <summary>gets the Nth root. Square root Nth=2/1, cube root Nth=3/1....</summary>
-	/// <param name="Nth">This is the Nth root</param>
-	/// <returns>The Nth root</returns>
+	/// <summary>gets the Nth root. Square root Nth = 2/1, cube root Nth = 3/1 ....</summary>
+	/// <param name="Nth"> the Nth root that the internal N/D are raised to</param>
+	/// <returns>new Fraction with the Nth root result</returns>
 	public This Root(This Nth)
 	{
 		return Pow(new This(Nth.D, Nth.N));                               // invert numerator and denominator for power
@@ -119,7 +121,7 @@ public class Fraction : IEquatable<Fraction>
 
 	#region ^ power
 
-	/// <summary>Raies the internal numerator/denominator to a power</summary>
+	/// <summary>Raises the internal numerator/denominator to a power</summary>
 	/// <param name="power">power to raise base to</param>
 	public This Pow(This power)
 	{
@@ -131,7 +133,7 @@ public class Fraction : IEquatable<Fraction>
 	/// <summary>Gets a fraction raised to a power</summary>
 	/// <param name="bas">base</param>
 	/// <param name="pow">power to raise base to</param>
-	/// <returns>result</returns>
+	/// <returns>new Fraction with result</returns>
 	private static This _pow(This bas, This pow)
 	{
 		This b = new This(bas.N, bas.D);                        // so that b is not overwritten
@@ -205,7 +207,8 @@ public class Fraction : IEquatable<Fraction>
 		}
 		return Convert.ToDouble(ret);
 	}
-	/// <summary>This GDC is too slow so will most likely be removed</summary>
+    /// <summary>This GDC is too slow so will most likely be removed</summary>
+    [Obsolete]
 	private static double GCDSlow(double numerator, double denominator)
 	{
 		double n = Math.Abs(numerator);     // assigned n and d to the answer numerator/denominator, as well as an
@@ -235,7 +238,7 @@ public class Fraction : IEquatable<Fraction>
 		this.D = f.D;
 		return f;
 	}
-
+	/// <summary>simplifies numerator/denominator and returns the result. Ex: 2/4 = 1/2</summary>
 	private static This _Simplify(double Numerator, double Denominator)
 	{
 		double n = Numerator;

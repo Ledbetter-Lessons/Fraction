@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_fraction" xml:lang="en-US">
+<title>Fraction Class Reference</title>
+<indexterm><primary>Fraction</primary></indexterm>
+<para>
+
+<para>this class is like a primitive data type with built in functions </para>
+ 
+</para>
+<para>
+Inherits IEquatable&lt; Fraction &gt;.</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_fraction_1adfbd09018a8b5e6319b57893f3a2d344"/><emphasis role="strong">Fraction</emphasis> (double numerator, double denominator)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a4ab52e81f7ead1a2ad7a339f34703892"/><emphasis role="strong">Fraction</emphasis> (double dbl)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1aae14e4ec363fcfe464b3922edb951b45"/><emphasis role="strong">Fraction</emphasis> (string fraction)</para>
+</listitem>
+            <listitem><para>double <link linkend="_class_fraction_1ac9856d465afe5de33a565313c2c3bf93">toDecimal</link> ()</para>
+
+<para>divides the numerator by the denominator and returns the result. </para>
+</listitem>
+            <listitem><para><link linkend="_class_fraction">This</link> <link linkend="_class_fraction_1a8df02322f5d6b9aa76cf4376fa0e9738">Root</link> (<link linkend="_class_fraction">This</link> Nth)</para>
+
+<para>gets the Nth root. Square root Nth = 2/1, cube root Nth = 3/1 .... </para>
+</listitem>
+            <listitem><para><link linkend="_class_fraction">This</link> <link linkend="_class_fraction_1a51a572feccac82946e99fbceb728f767">Pow</link> (<link linkend="_class_fraction">This</link> power)</para>
+
+<para>Raises the internal numerator/denominator to a power </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_fraction_1ad01edf954dec996c2062eba9f1f9919c">GCD</link> ()</para>
+
+<para>gets the greatest common divisor of the numerator and denominator </para>
+</listitem>
+            <listitem><para><link linkend="_class_fraction">This</link> <link linkend="_class_fraction_1aa7525fb03f488fdeaa7b44f2a41d6f1a">Simplify</link> ()</para>
+
+<para>Simplifies internal fraction. Ex:2/4 = 1/2. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a033e0280a23bc105c0095dc6636d09b3"/>override int <emphasis role="strong">GetHashCode</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1ac4c3fd9fd8d7622b09242b73715496fc"/>override bool <emphasis role="strong">Equals</emphasis> (object obj)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a5caaf7a4618a25967e9fb573ac93ab3d"/>bool <emphasis role="strong">Equals</emphasis> (<link linkend="_class_fraction">This</link> obj)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a9db80d4b5ad083fa3c61f256164a5901"/>override string <emphasis role="strong">ToString</emphasis> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_fraction_1a5263ca2b4f1f11490be0d6a6fa1e7ba0">Print</link> ()</para>
+
+<para>Print fraction to console </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_fraction_1ab57c8cbeba0c8e13f7880f2ecc2aa447"/>static implicit <emphasis role="strong">operator double</emphasis> (<link linkend="_class_fraction">This</link> value)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1acfa6b76df837d5106dfc6fd80720390e"/>static implicit <emphasis role="strong">operator This</emphasis> (double value)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a34415b484ee296487a68b6d02bb94854"/>static implicit <emphasis role="strong">operator This</emphasis> (string value)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1acf2acc31069302c3f78deedf24513a4d"/>static bool <emphasis role="strong">operator!=</emphasis> (<link linkend="_class_fraction">This</link> lhs, <link linkend="_class_fraction">This</link> rhs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a9cd05a4a2d05b4b06f609155df79ea36"/>static bool <emphasis role="strong">operator&lt;</emphasis> (<link linkend="_class_fraction">This</link> lhs, <link linkend="_class_fraction">This</link> rhs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1afcd3e41cfe9d66a04bd705e2b0e7f5b3"/>static bool <emphasis role="strong">operator&gt;</emphasis> (<link linkend="_class_fraction">This</link> lhs, <link linkend="_class_fraction">This</link> rhs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1aa80613d366b2a5e3cc9465619ae10384"/>static bool <emphasis role="strong">operator&lt;=</emphasis> (<link linkend="_class_fraction">This</link> lhs, <link linkend="_class_fraction">This</link> rhs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1af2c52198f6763a8e5d87f0d82219471c"/>static bool <emphasis role="strong">operator&gt;=</emphasis> (<link linkend="_class_fraction">This</link> lhs, <link linkend="_class_fraction">This</link> rhs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1aa7eb6e447bc97a3cc86cec41f824552e"/>static bool <emphasis role="strong">operator==</emphasis> (<link linkend="_class_fraction">This</link> lhs, <link linkend="_class_fraction">This</link> rhs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1ad26b8017a15e06e56b55243e097a237f"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator+</emphasis> (<link linkend="_class_fraction">This</link> a)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1abc822f202932692800519b0a6391aaea"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator+</emphasis> (<link linkend="_class_fraction">This</link> lhs, <link linkend="_class_fraction">This</link> rhs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1ab8c060582307ba47d70e0d79d16eb964"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator++</emphasis> (<link linkend="_class_fraction">This</link> a)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1ac5645ed72bf8f266959aec1cfca0583e"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator-</emphasis> (<link linkend="_class_fraction">This</link> a)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a623eb120e14b5ca973f17bedaac67fbf"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator-</emphasis> (<link linkend="_class_fraction">This</link> lhs, <link linkend="_class_fraction">This</link> rhs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a3487f5e9a9a5f873cf46fdc333e6872b"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator--</emphasis> (<link linkend="_class_fraction">This</link> a)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a9e77d7d550fbf3366ef935a044518e13"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator*</emphasis> (<link linkend="_class_fraction">This</link> lhs, <link linkend="_class_fraction">This</link> rhs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a27e83b7ffa27c8703f7056e634a6ad24"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator*</emphasis> (double a, <link linkend="_class_fraction">This</link> b)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a308143964f5c8eb7ac20143013297325"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator*</emphasis> (<link linkend="_class_fraction">This</link> a, double b)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1ae3304e900864001dfabba8b0110e2b1f"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator/</emphasis> (<link linkend="_class_fraction">This</link> lhs, <link linkend="_class_fraction">This</link> rhs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1aac81c2c463b1032f9f92ee2e5be74c45"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator/</emphasis> (double lhs, <link linkend="_class_fraction">This</link> rhs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a377f0e28859aa5962eb2a214d4f3cce5"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator/</emphasis> (<link linkend="_class_fraction">This</link> lhs, double rhs)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1af08d8cf17ee48542ce45ebc614941f77"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator^</emphasis> (<link linkend="_class_fraction">This</link> a, <link linkend="_class_fraction">This</link> b)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a0c87dd68ae0678e77ca812b682d2836d"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator^</emphasis> (double a, <link linkend="_class_fraction">This</link> b)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_fraction_1a6375490c74fdf3d19da232454b9fd914"/>static <link linkend="_class_fraction">This</link> <emphasis role="strong">operator^</emphasis> (<link linkend="_class_fraction">This</link> a, double b)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static double <link linkend="_class_fraction_1a7e341c9c95924ed5b756f3fc67e9bf54">epsilon</link> = 1e-15</para>
+
+<para>value used in trying to fix precision errors. double precision is ~15-17 </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>double <link linkend="_class_fraction_1a9675f875d2a5f40cbcecac6a3b9f9259">N</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>numerator </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_fraction_1a946b75aa490ae50de11fd4f3200619e4">D</link><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>denominator </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this class is like a primitive data type with built in functions </para>
+
+
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_fraction_1ad01edf954dec996c2062eba9f1f9919c"/>    <section>
+    <title>GCD()</title>
+<indexterm><primary>GCD</primary><secondary>Fraction</secondary></indexterm>
+<indexterm><primary>Fraction</primary><secondary>GCD</secondary></indexterm>
+<para><computeroutput>double Fraction.GCD ( )</computeroutput></para><para>
+
+<para>gets the greatest common divisor of the numerator and denominator </para>
+</para>
+    </section><anchor xml:id="_class_fraction_1a51a572feccac82946e99fbceb728f767"/>    <section>
+    <title>Pow()</title>
+<indexterm><primary>Pow</primary><secondary>Fraction</secondary></indexterm>
+<indexterm><primary>Fraction</primary><secondary>Pow</secondary></indexterm>
+<para><computeroutput><link linkend="_class_fraction">This</link> Fraction.Pow (<link linkend="_class_fraction">This</link> power)</computeroutput></para><para>
+
+<para>Raises the internal numerator/denominator to a power </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>power</entry>
+                                <entry>
+<para>power to raise base to</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_fraction_1a5263ca2b4f1f11490be0d6a6fa1e7ba0"/>    <section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>Fraction</secondary></indexterm>
+<indexterm><primary>Fraction</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>void Fraction.Print ( )</computeroutput></para><para>
+
+<para>Print fraction to console </para>
+</para>
+    </section><anchor xml:id="_class_fraction_1a8df02322f5d6b9aa76cf4376fa0e9738"/>    <section>
+    <title>Root()</title>
+<indexterm><primary>Root</primary><secondary>Fraction</secondary></indexterm>
+<indexterm><primary>Fraction</primary><secondary>Root</secondary></indexterm>
+<para><computeroutput><link linkend="_class_fraction">This</link> Fraction.Root (<link linkend="_class_fraction">This</link> Nth)</computeroutput></para><para>
+
+<para>gets the Nth root. Square root Nth = 2/1, cube root Nth = 3/1 .... </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Nth</entry>
+                                <entry>
+<para>the Nth root that the internal N/D are raised to</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>new <link linkend="_class_fraction">Fraction</link> with the Nth root result</para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_fraction_1aa7525fb03f488fdeaa7b44f2a41d6f1a"/>    <section>
+    <title>Simplify()</title>
+<indexterm><primary>Simplify</primary><secondary>Fraction</secondary></indexterm>
+<indexterm><primary>Fraction</primary><secondary>Simplify</secondary></indexterm>
+<para><computeroutput><link linkend="_class_fraction">This</link> Fraction.Simplify ( )</computeroutput></para><para>
+
+<para>Simplifies internal fraction. Ex:2/4 = 1/2. </para>
+</para>
+    </section><anchor xml:id="_class_fraction_1ac9856d465afe5de33a565313c2c3bf93"/>    <section>
+    <title>toDecimal()</title>
+<indexterm><primary>toDecimal</primary><secondary>Fraction</secondary></indexterm>
+<indexterm><primary>Fraction</primary><secondary>toDecimal</secondary></indexterm>
+<para><computeroutput>double Fraction.toDecimal ( )</computeroutput></para><para>
+
+<para>divides the numerator by the denominator and returns the result. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_fraction_1a7e341c9c95924ed5b756f3fc67e9bf54"/>    <section>
+    <title>epsilon</title>
+<indexterm><primary>epsilon</primary><secondary>Fraction</secondary></indexterm>
+<indexterm><primary>Fraction</primary><secondary>epsilon</secondary></indexterm>
+<para><computeroutput>double Fraction.epsilon = 1e-15<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>value used in trying to fix precision errors. double precision is ~15-17 </para>
+</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_fraction_1a946b75aa490ae50de11fd4f3200619e4"/>    <section>
+    <title>D</title>
+<indexterm><primary>D</primary><secondary>Fraction</secondary></indexterm>
+<indexterm><primary>Fraction</primary><secondary>D</secondary></indexterm>
+<para><computeroutput>double Fraction.D<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>denominator </para>
+</para>
+    </section><anchor xml:id="_class_fraction_1a9675f875d2a5f40cbcecac6a3b9f9259"/>    <section>
+    <title>N</title>
+<indexterm><primary>N</primary><secondary>Fraction</secondary></indexterm>
+<indexterm><primary>Fraction</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>double Fraction.N<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+
+<para>numerator </para>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Fraction.cs</section>
+</section>
