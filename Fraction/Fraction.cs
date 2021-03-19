@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using This = Fraction;                                          //Used to have shorter code. :)
 
-/// <summary>this class is like a primitive data type with built in functions</summary>
+/// <summary>This class is like a primitive data type with built in functions</summary>
 [Serializable, StructLayout(LayoutKind.Sequential)]
 public class Fraction : IEquatable<Fraction>
 {
