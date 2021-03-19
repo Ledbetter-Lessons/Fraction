@@ -1,0 +1,13 @@
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction_Test\bin\Debug\Fraction_Test.exe.config
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction_Test\bin\Debug\Fraction_Test.exe
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction_Test\bin\Debug\Fraction_Test.pdb
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction_Test\bin\Debug\Fraction.dll
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction_Test\bin\Debug\Fraction.pdb
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction_Test\obj\Debug\Fraction_Test.csprojAssemblyReference.cache
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction_Test\obj\Debug\Fraction_Test.Form1.resources
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction_Test\obj\Debug\Fraction_Test.Properties.Resources.resources
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction_Test\obj\Debug\Fraction_Test.csproj.GenerateResource.cache
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction_Test\obj\Debug\Fraction_Test.csproj.CoreCompileInputs.cache
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction_Test\obj\Debug\Fraction_Test.csproj.CopyComplete
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction_Test\obj\Debug\Fraction_Test.exe
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction_Test\obj\Debug\Fraction_Test.pdb

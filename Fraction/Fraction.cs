@@ -8,8 +8,8 @@ using System.Runtime.InteropServices;
 [Serializable, StructLayout(LayoutKind.Sequential)]
 public class Fraction : IEquatable<Fraction>
 {
-	/// <summary>value used in trying to fix precision errors.</summary>
-	public static double epsilon = 1e-12;
+	/// <summary>value used in trying to fix precision errors. double precision is ~15-17</summary>
+	public static double epsilon = 1e-15;
 
 	/// <summary>numerator</summary>
 	public double N { get; set; }
@@ -95,11 +95,20 @@ public class Fraction : IEquatable<Fraction>
 	}
 	#endregion
 
-	#region √ root
-	/// <summary>gets the Nth root. Square root N=2/1, cube root N=3/1....</summary>
-	public void Root(This f)
+	#region convert to
+	public double toDecimal()
 	{
-		Pow(new This(f.D, f.N));                                // invert numerator and denominator for power
+		return this.N / this.D;
+	}
+	#endregion
+
+	#region √ root
+	/// <summary>gets the Nth root. Square root Nth=2/1, cube root Nth=3/1....</summary>
+	/// <param name="Nth">This is the Nth root</param>
+	/// <returns>The Nth root</returns>
+	public This Root(This Nth)
+	{
+		return Pow(new This(Nth.D, Nth.N));                               // invert numerator and denominator for power
 	}
 	#endregion
 
@@ -107,12 +116,11 @@ public class Fraction : IEquatable<Fraction>
 
 	/// <summary>Raies the internal numerator/denominator to a power</summary>
 	/// <param name="power">power to raise base to</param>
-	public void Pow(This power)
+	public This Pow(This power)
 	{
 		This b = new This(this.N, this.D);
 		This p = _pow(b, power);
-		this.N = p.N;
-		this.D = p.D;
+		return new This(p.N, p.D);
 	}
 
 	/// <summary>Gets a fraction raised to a power</summary>
@@ -178,8 +186,21 @@ public class Fraction : IEquatable<Fraction>
 	{
 		return GCD(this.N, this.D);
 	}
-
+	/// <summary>Greatest Common Divisor</summary>
 	private static double GCD(double numerator, double denominator)
+	{
+		Int64 ret = 1;
+		Int64 a = Convert.ToInt64(numerator);
+		Int64 b = Convert.ToInt64(denominator);
+		while (b != 0)
+		{
+			ret = b;
+			b = a % b;
+			a = ret;
+		}
+		return Convert.ToDouble(ret);
+	}
+	private static double GCDSlow(double numerator, double denominator)
 	{
 		double n = Math.Abs(numerator);     // assigned n and d to the answer numerator/denominator, as well as an
 		double d = Math.Abs(denominator);   // empty integer, this is to make code more simple and easier to read
@@ -197,16 +218,16 @@ public class Fraction : IEquatable<Fraction>
 
 		return 1;                           //No GDC so return 1 since all numbers are divisible by 1
 	}
-
 	#endregion
 
 	#region simplify
 	/// <summary>Simplifies internal fraction. Ex:2/4 = 1/2.</summary>
-	public void Simplify()
+	public This Simplify()
 	{
 		This f = _Simplify(this.N, this.D);
 		this.N = f.N;
 		this.D = f.D;
+		return f;
 	}
 
 	private static This _Simplify(double Numerator, double Denominator)
@@ -242,6 +263,7 @@ public class Fraction : IEquatable<Fraction>
 	/// <summary>Attempst to fix precission errors</summary>
 	static This fixPrecision(This fraction)
 	{
+		Console.WriteLine("Fixn");
 		double p1 = fraction.N / fraction.D;
 		double p2 = Convert.ToInt64(p1);
 

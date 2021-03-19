@@ -1,0 +1,9 @@
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction\bin\Debug\netstandard2.0\Fraction.deps.json
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction\bin\Debug\netstandard2.0\Fraction.dll
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction\bin\Debug\netstandard2.0\Fraction.pdb
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction\obj\Debug\netstandard2.0\Fraction.csprojAssemblyReference.cache
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction\obj\Debug\netstandard2.0\Fraction.AssemblyInfoInputs.cache
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction\obj\Debug\netstandard2.0\Fraction.AssemblyInfo.cs
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction\obj\Debug\netstandard2.0\Fraction.csproj.CoreCompileInputs.cache
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction\obj\Debug\netstandard2.0\Fraction.dll
+E:\_LedBetterLessons\SourceControl\Fraction\Fraction\obj\Debug\netstandard2.0\Fraction.pdb
