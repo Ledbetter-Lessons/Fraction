@@ -1,13 +1,13 @@
-﻿// Released under the gpl 3.0 license http://www.gnu.org/licenses/gpl-3.0.html
+﻿// Project Website: https://sites.google.com/view/ledbetter-lessons/fraction
+// Released under the gpl 3.0 license http://www.gnu.org/licenses/gpl-3.0.html
 // Free to use how you want. Provided as-is, without warranty of any kind. 
 // A link back to my site would be nice, but not manditory
-// https://sites.google.com/view/ledbetter-lessons/fraction
 // Let me now if you find bugs or improvements.
 
 using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using This = Fraction;                                          //Used to have shorter code. :)
+using This = Fraction;
 
 /// <summary>This class is like a primitive data type with built in functions</summary>
 [Serializable, StructLayout(LayoutKind.Sequential)]
@@ -69,7 +69,7 @@ public class Fraction : IEquatable<Fraction>
 		double n = double.Parse(sdecpart);
 		double d = Math.Pow(10, sdecpart.Length);
 		n += d * whole;
-		return _Simplify(n * neg, d);                           // probably could remove simplify... 
+		return _Simplify(n * neg, d);                           // probably could remove simplify, but used by mod
 	}
 	/// <summary>converts a string representation of a fraction to a Fraction. Ex: "1/3" = 1/3</summary>
 	private static This fromString(string fraction)
@@ -207,8 +207,8 @@ public class Fraction : IEquatable<Fraction>
 		}
 		return Convert.ToDouble(ret);
 	}
-    /// <summary>This GDC is too slow so will most likely be removed</summary>
-    [Obsolete]
+	/// <summary>This GDC is too slow so will most likely be removed</summary>
+	[Obsolete]
 	private static double GCDSlow(double numerator, double denominator)
 	{
 		double n = Math.Abs(numerator);     // assigned n and d to the answer numerator/denominator, as well as an
@@ -490,6 +490,30 @@ public class Fraction : IEquatable<Fraction>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public static This operator /(This lhs, double rhs)         // (n/d) / a
 	{ return lhs / fromDecimal(rhs); }
+
+	#endregion
+
+	#region mod
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	public static This operator %(This lhs, This rhs)           // (n1/d1) % (n2/d2)
+	{
+		double result = lhs.toDecimal() % rhs.toDecimal();
+		return fromDecimal(result);
+	}
+
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	public static This operator %(double lhs, This rhs)           // a % (n2/d2)
+	{
+		double result = lhs % rhs.toDecimal();
+		return fromDecimal(result);
+	}
+
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	public static This operator %(This lhs, double rhs)           // (n1/d1) % a
+	{
+		double result = lhs.toDecimal() % rhs;
+		return fromDecimal(result);
+	}
 
 	#endregion
 
